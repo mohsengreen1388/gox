@@ -1,12 +1,13 @@
-### <p style="text-align: center;">New Desktop Gui For Golang</p>
+<h1 style="text-align: center;">New Desktop Gui For Golang</h1>
 
-### <p style="text-align: center;">![image info](./assata/bitmap.png)</p>
+<p align="center">
+    <img  src="./assata/bitmap.png" />
+</p>
 
 <hr>
 
 #### this is New Gui App (My goal is  make easy-use Gui I try avoid Complexity ) For Linux and Window And Mac os  andriod in the future 
  
-
 > **_NOTE:_**  this version is beta not stable 
 may have bug just test on the Ubuntu 20.4 and Window
 
@@ -97,6 +98,13 @@ Installation
 /// this package use raylib-go
 go get "github.com/mohsengreen1388/gox/widgets"
 ```
+
+writing by Gox
+--------------
+
+<p align="center">
+    <img width="20%"  src="./assata/cal.png" />
+</p>
 
 Init Project
 ``` go

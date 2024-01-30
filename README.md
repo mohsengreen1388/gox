@@ -1,4 +1,4 @@
-<h1 style="text-align: center;">New Desktop Gui For Golang</h1>
+<h1 align="center">New Desktop Gui For Golang</h1>
 
 <p align="center">
     <img  src="./assata/bitmap.png" />

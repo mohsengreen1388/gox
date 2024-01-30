@@ -76,11 +76,9 @@ func (bu *Button) Event() {
 	}
 }
 
-func (bu *Button) SetPosition(x, y, width, hight int32) {
+func (bu *Button) SetPosition(x, y int32) {
 	bu.X = x
 	bu.Y = y
-	bu.Width = width
-	bu.Hight = hight
 }
 
 func (bu *Button) Coord() rl.Rectangle {

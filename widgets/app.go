@@ -1,10 +1,10 @@
 package gox
 
 import (
-	"github.com/mohsengreen1388/gox/pkg/codepointtext"
 	"encoding/base64"
-	"image/color"
 	rl "github.com/gen2brain/raylib-go/raylib"
+	"github.com/mohsengreen1388/gox/pkg/codepointtext"
+	"image/color"
 )
 
 type App struct {
@@ -29,7 +29,7 @@ type InterfaceDraw interface {
 
 // App is main object that we can by it call other object
 // examle app.NewButton()
-func NewApp() *App {
+func newApp() *App {
 	return &App{
 		Font:               rl.GetFontDefault(),
 		BackgroundColor:    rl.White,
@@ -38,27 +38,27 @@ func NewApp() *App {
 	}
 }
 
-func (a *App) NewTopBar(logo string, width, hight int) *TopBar {
+func (a *App) NewTopBar(logoName, tabName string) *TopBar {
 	button := a.NewButton()
 	button.Icon = Menu
-	button.IconSize = 27
-	button.iconVector = rl.Vector2{-15, -5}
+	button.IconSize = 50
+	button.iconVector = rl.Vector2{-27, -17}
 	button.IconColor = rl.SkyBlue
 
 	return &TopBar{
 		Font:          a.Font,
 		app:           a,
-		Text:          "TopBar",
+		Text:          tabName,
 		FontSize:      34,
 		TextColor:     rl.Black,
 		App:           a,
 		Button:        button,
-		TextLogo:      "home Page",
+		TextLogo:      logoName,
 		TextLogoSize:  24,
 		TextLogoColor: rl.SkyBlue,
-		ImageWidth:    float32(width),
-		Imagehight:    float32(hight),
-		IconTop:       Menu,
+		ImageWidth:    float32(100),
+		Imagehight:    float32(100),
+		IconTop:       Home,
 		iconSize:      64,
 		IconColor:     rl.SkyBlue,
 	}
@@ -186,7 +186,7 @@ func (a *App) NewBoard() *Board {
 }
 
 // New tab button
-func (a *App) NewTab(count int8,childBoard bool) *TabBar {
+func (a *App) NewTab(count int8, childBoard bool) *TabBar {
 	tab := &TabBar{
 		Font:            a.Font,
 		app:             a,
@@ -340,7 +340,7 @@ func Init(title string, width, hight int32) *App {
 	rl.SetConfigFlags(rl.FlagWindowResizable)
 	rl.InitWindow(width, hight, title)
 
-	return NewApp()
+	return newApp()
 }
 
 // Exce to update a for per frame

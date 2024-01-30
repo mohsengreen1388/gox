@@ -47,14 +47,15 @@ func (ch *CheckBox) Event(x, y float32) {
 
 }
 
-func (ch *CheckBox) Coord() rl.Rectangle {
-	return rl.NewRectangle(float32(ch.X), float32(ch.Y), float32(ch.Width), float32(ch.Hight))
-}
-
 func (ch *CheckBox) SetPosition(x, y int32) {
 	ch.X = x
 	ch.Y = y
 }
+
+func (ch *CheckBox) Coord() rl.Rectangle {
+	return rl.NewRectangle(float32(ch.X), float32(ch.Y), float32(ch.Width), float32(ch.Hight))
+}
+
 
 func (ch *CheckBox) DrawInterface(x, y, width, hight int32) {
 	ch.body(float32(x), float32(y))

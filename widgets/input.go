@@ -236,11 +236,9 @@ func (in *Input) selectText() {
 	}
 }
 
-func (in *Input) SetPosition(x, y, width, hight int32) {
+func (in *Input) SetPosition(x, y int32) {
 	in.X = x
 	in.Y = y
-	in.Width = width
-	in.Hight = hight
 }
 
 func (in *Input) Coord() rl.Rectangle {

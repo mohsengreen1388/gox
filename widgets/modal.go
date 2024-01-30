@@ -48,11 +48,9 @@ func (mo *Modal) event() {
 	}
 }
 
-func (mo *Modal) SetPosition(x, y, width, hight int32) {
+func (mo *Modal) SetPosition(x, y int32) {
 	mo.X = x
 	mo.Y = y
-	mo.Width = width
-	mo.Hight = hight
 }
 
 func (mo *Modal) Coord() rl.Rectangle {

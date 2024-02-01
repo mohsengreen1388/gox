@@ -1,6 +1,6 @@
 module github.com/mohsengreen1388/gox
 
-go 1.21.3
+go 1.21
 
 require (
 	github.com/akavel/rsrc v0.10.2 // indirect

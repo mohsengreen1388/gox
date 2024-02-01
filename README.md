@@ -103,7 +103,7 @@ writing by Gox
 --------------
 
 <p align="center">
-    <img width="20%"  src="./assata/cal.png" />
+    <img width="30%"  src="./assata/cal.png" />
 </p>
 
 Init Project
@@ -182,7 +182,7 @@ func main() {
 
 ```go
 
-	button := app.NewButton()
+	    button := app.NewButton()
 		button.Text = "ok"
 		button.BackgroundColor = gox.BLUE
 		button2 := app.NewButton()
@@ -240,15 +240,6 @@ func main() {
 <p align="center">
     <img  src="./assata/text.png" />
 </p>
-
-		menu := app.NewMeneBar()
-		menuFloat := app.NewMeneFloat()
-		menuFloat.AddSubMenu("Exit",gox.ExitToApp,"",func() {
-			// your code
-		})
-		menu.AddItem("File",menuFloat)
-
-
 
 #### Menu
 
